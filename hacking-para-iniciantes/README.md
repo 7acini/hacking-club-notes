@@ -1,13 +1,5 @@
 # 📓 Hacking para Iniciantes
 
-## 📌 Visão Geral
-
-Este repositório contém anotações organizadas por módulos referentes ao curso **Hacking para Iniciantes** do [Hacking Club](https://hackingclub.com.br). Os conteúdos aqui documentados visam auxiliar no aprendizado de fundamentos em Segurança da Informação, Redes, Aplicações Web e muito mais.
-
-> ⚠️ **AVISO:** Este material é exclusivamente educacional. Use com responsabilidade e ética profissional.
-
----
-
 ## 🧠 Módulos do Curso
 
 <table>
@@ -34,9 +26,3 @@ Este repositório contém anotações organizadas por módulos referentes ao cur
 </table>
 
 ---
-
-## ⚠️ Aviso Legal
-
-Todo o conteúdo deste repositório destina-se exclusivamente a **fins educacionais e acadêmicos**. Nenhuma informação aqui presente deve ser utilizada para atividades não autorizadas. A responsabilidade pelo uso correto é inteiramente do usuário.
-
-🚀 **Happy Hacking!**
