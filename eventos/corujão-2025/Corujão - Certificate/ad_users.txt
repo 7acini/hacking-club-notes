@@ -1,0 +1,23 @@
+
+distinguishedName: CN=Administrator,CN=Users,DC=certificate,DC=hc
+description: Built-in account for administering the computer/domain
+memberOf: CN=Group Policy Creator Owners,CN=Users,DC=certificate,DC=hc; CN=Domain Admins,CN=Users,DC=certificate,DC=hc; CN=Enterprise Admins,CN=Users,DC=certificate,DC=hc; CN=Schema Admins,CN=Users,DC=certificate,DC=hc; CN=Administrators,CN=Builtin,DC=certificate,DC=hc
+sAMAccountName: Administrator
+
+distinguishedName: CN=Guest,CN=Users,DC=certificate,DC=hc
+description: Built-in account for guest access to the computer/domain
+memberOf: CN=Guests,CN=Builtin,DC=certificate,DC=hc
+sAMAccountName: Guest
+
+distinguishedName: CN=krbtgt,CN=Users,DC=certificate,DC=hc
+description: Key Distribution Center Service Account
+memberOf: CN=Denied RODC Password Replication Group,CN=Users,DC=certificate,DC=hc
+sAMAccountName: krbtgt
+
+distinguishedName: CN=davi,CN=Users,DC=certificate,DC=hc
+sAMAccountName: davi
+
+distinguishedName: CN=manager,CN=Users,DC=certificate,DC=hc
+description: $n1hej0ke3hbr^$s&0nn
+memberOf: CN=CA Manager,CN=Users,DC=certificate,DC=hc; CN=Remote Management Users,CN=Builtin,DC=certificate,DC=hc
+sAMAccountName: manager

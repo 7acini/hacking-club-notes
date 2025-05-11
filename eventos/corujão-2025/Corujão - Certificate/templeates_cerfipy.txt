@@ -1,0 +1,74 @@
+[*] Finding certificate templates
+[*] Found 34 certificate templates
+[*] Finding certificate authorities
+[*] Found 1 certificate authority
+[*] Found 12 enabled certificate templates
+[*] Trying to get CA configuration for 'CA' via CSRA
+[!] Got error while trying to get CA configuration for 'CA' via CSRA: CASessionError: code: 0x80070005 - E_ACCESSDENIED - General access denied error.
+[*] Trying to get CA configuration for 'CA' via RRP
+[*] Got CA configuration for 'CA'
+[*] Enumeration output:
+Certificate Authorities
+  0
+    CA Name                             : CA
+    DNS Name                            : DC-01.certificate.hc
+    Certificate Subject                 : CN=CA, DC=certificate, DC=hc
+    Certificate Serial Number           : 76B2BDE27C5F7CB0433C6B67EE80EE62
+    Certificate Validity Start          : 2024-10-09 15:38:30+00:00
+    Certificate Validity End            : 2123-10-09 15:48:30+00:00
+    Web Enrollment                      : Disabled
+    User Specified SAN                  : Disabled
+    Request Disposition                 : Issue
+    Enforce Encryption for Requests     : Enabled
+    Permissions
+      Owner                             : CERTIFICATE.HC\Administrators
+      Access Rights
+        ManageCertificates              : CERTIFICATE.HC\Administrators
+                                          CERTIFICATE.HC\Domain Admins
+                                          CERTIFICATE.HC\Enterprise Admins
+        ManageCa                        : CERTIFICATE.HC\Administrators
+                                          CERTIFICATE.HC\Domain Admins
+                                          CERTIFICATE.HC\Enterprise Admins
+        Enroll                          : CERTIFICATE.HC\Authenticated Users
+Certificate Templates
+  0
+    Template Name                       : DelegateCert
+    Display Name                        : DelegateCert
+    Certificate Authorities             : CA
+    Enabled                             : True
+    Client Authentication               : False
+    Enrollment Agent                    : True
+    Any Purpose                         : False
+    Enrollee Supplies Subject           : False
+    Certificate Name Flag               : SubjectRequireDirectoryPath
+                                          SubjectAltRequireUpn
+    Enrollment Flag                     : AutoEnrollment
+                                          PublishToDs
+                                          IncludeSymmetricAlgorithms
+    Private Key Flag                    : ExportableKey
+    Extended Key Usage                  : Certificate Request Agent
+    Requires Manager Approval           : False
+    Requires Key Archival               : False
+    Authorized Signatures Required      : 0
+    Validity Period                     : 99 years
+    Renewal Period                      : 6 weeks
+    Minimum RSA Key Length              : 2048
+    Permissions
+      Enrollment Permissions
+        Enrollment Rights               : CERTIFICATE.HC\CA Manager
+                                          CERTIFICATE.HC\Domain Users
+                                          CERTIFICATE.HC\Domain Admins
+                                          CERTIFICATE.HC\Enterprise Admins
+      Object Control Permissions
+        Owner                           : CERTIFICATE.HC\Administrator
+        Write Owner Principals          : CERTIFICATE.HC\Domain Admins
+                                          CERTIFICATE.HC\Enterprise Admins
+                                          CERTIFICATE.HC\Administrator
+        Write Dacl Principals           : CERTIFICATE.HC\Domain Admins
+                                          CERTIFICATE.HC\Enterprise Admins
+                                          CERTIFICATE.HC\Administrator
+        Write Property Principals       : CERTIFICATE.HC\Domain Admins
+                                          CERTIFICATE.HC\Enterprise Admins
+                                          CERTIFICATE.HC\Administrator
+    [!] Vulnerabilities
+      ESC3                              : 'CERTIFICATE.HC\\CA Manager' and 'CERTIFICATE.HC\\Domain Users' can enroll and template has Certificate Request Agent EKU set
