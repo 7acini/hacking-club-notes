@@ -64,6 +64,7 @@ O protocolo HTTP utiliza-se de métodos para a realizações de funções na apl
 | TRACE    |
 | OPTIONS  |
 | HEAD     |
+
 Desses métodos, disparadamente, os mais utilizados são os métodos GET  e POST sendo utilizados para leitura e escrita de dados respectivamente.
 
  - GET
@@ -107,3 +108,50 @@ Dentro dos cabeçalhos HTTP, existem diversas flags, data-types, status code etc
 
 ## Arquitetura de aplicações (API GW, Micro-serviços e outros)
 
+Nas requisições HTTP, a URI pode não só conter o caminha de arquivos e parâmetros dos mesmos, mas a URI pode direcionar para uma rota que pode retornar um Frotend, ou o mais comum, sendo uma API.
+
+```http
+POST /api/v2/login HTTP/1.1
+```
+
+Como podemos ver acima, temos uma requisição HTTP POST para a **rota** `/api/v2/login` que provavelmente recebe um json com `username` e `password`, agindo como um arquivo, porém utilizando rotas podemos organizar melhor a arquitetura de nosso projeto.
+Afim de aprendizado, podemos criar rotas em node.js utilizando o Express Framework, como mostra o código abaixo:
+
+```js
+const express = require('express');
+const app = express();
+
+app.get("/", (req, res) => {
+	res.send("Página Principal")
+});
+
+app.post("/api/v2/login", (req, res) => {
+	req.json([
+		{
+			id: 1,
+			username: "Guilherme",
+			password: "p@ssw0rd"
+		}
+	])
+})
+```
+Acima, temos um código que simula uma aplicação da requisição anterior, sendo esse um código pertencente ao **Backend** da aplicação, sendo TUDO que roda no servidor, já nas telas, páginas etc... temos o **Frontend**, esses funcionam em conjunto para o funcionamento de uma aplicação web, como mostra a imagem abaixo:
+
+<img src="images/FrontendxBackend.png" style="width:50%">
+
+De maneira simples, uma aplicação pode conter 2 tipos diferentes dee Arquitetura, sendo elas Monolito e Micro-Serviços.
+Sendo criadas e desenvolvidas de maneira diferentes, ambas utilizam a integração de Back e Frontend.
+
+### Monolito
+
+Monolitos, são aplicações que mais simples, geralemnte encontradas em softwares mais antigos, que centralizam todo seu desenvolvimento em uma mesma "Infraestrutura", se posso dizer dessa forma, sendo o FRONT e o BACKEND unidos e funcionam um dependente do outro, separando somente seu Banco de dados, assim como  mostra a imagem abaixo:
+
+<img src="images/monolito.png" style="width:50%">
+
+### Micro-Serviços
+
+Já os micro-serviços, são uma forma de mais fácil de escalonar aplicações, pois cada funcionalidade importante da aplicação é desenvolvido como uma aplicação a parte, ou seja, caso aquela funcionalidade/Serviço, esteja sendo mais requisitada, podemos escalonar horizontalmente somente aquele serviço, não necessitando de um escalonamento vertical como em monolitos.
+E para isso, existem diversas formas que micro-serviços, porém o mais utilizados são os Event-Driven Arch que são os micro-serviços baseados em eventos, pois para que os serviços comuniquem entre si, é necessário que haja um Message Broker, sendo ele um sistema de mensageria que informa a demanda para cada serviço, permitindo assim que não aconteça uma algazarra de requisições HTTP entre cada serviço.
+Segue imagem do fluxo de funcionamento do modelo acima:
+
+<img src="images/micro-services.png" style="width:50%">
